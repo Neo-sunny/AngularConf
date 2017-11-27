@@ -6,5 +6,17 @@ import { PROMOTIONS } from '../shared/promotions';
 export class PromotionService {
 
   constructor() { }
+  getPromotions(): Promotion[]{
+    return PROMOTIONS;
+  }
+  getPromotion(id: number):Promotion{
+    return PROMOTIONS.filter( (promotion) => (promotion.id===id))[0];
+  }
+  getFeaturedPromotion():Promotion{
+    return PROMOTIONS.filter( (promotion) =>  promotion.featured)[0];
+  }
+
+  
+
 
 }

@@ -2,10 +2,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MyMaterialModule } from './my-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout'
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RouterModule, Routes } from '@angular/router';
+
+import { routes } from './app-routing/routes';
 
 import { AppComponent } from './app.component';
 
 import 'hammerjs';
+
 import { MenuComponent } from './menu/menu.component';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
 
@@ -31,7 +36,9 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     BrowserModule,
     MyMaterialModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    RouterModule.forRoot(routes),
+    AppRoutingModule
   ],
   providers: [DishService],
   bootstrap: [AppComponent]

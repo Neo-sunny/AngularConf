@@ -1,3 +1,4 @@
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MyMaterialModule } from './my-material.module';
@@ -41,7 +42,8 @@ import { LoginComponent } from './login/login.component';
     MyMaterialModule,
     FlexLayoutModule,
     RouterModule.forRoot(routes),
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [    LoginComponent ],

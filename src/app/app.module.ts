@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { MyMaterialModule } from './my-material.module';
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
 import { routes } from './app-routing/routes';
@@ -43,7 +44,8 @@ import { LoginComponent } from './login/login.component';
     FlexLayoutModule,
     RouterModule.forRoot(routes),
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [    LoginComponent ],
